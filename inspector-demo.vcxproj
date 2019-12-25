@@ -56,10 +56,10 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\Debugx64\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build\Debugx64ObjDemo\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\Debugx86\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build\Debugx86ObjDemo\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build_ITERATOR_DEBUG_0\Debugx64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">build_ITERATOR_DEBUG_0\Debugx64ObjDemo\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build_ITERATOR_DEBUG_0\Debugx86\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">build_ITERATOR_DEBUG_0\Debugx86ObjDemo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inspector-demo</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">inspector-demo</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
@@ -68,10 +68,10 @@
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\Releasex64\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build\Releasex64ObjDemo\</IntDir>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\Releasex86\</OutDir>
-    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build\Releasex86ObjDemo\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build_ITERATOR_DEBUG_0\Releasex64\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">build_ITERATOR_DEBUG_0\Releasex64ObjDemo\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build_ITERATOR_DEBUG_0\Releasex86\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">build_ITERATOR_DEBUG_0\Releasex86ObjDemo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inspector-demo</TargetName>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">inspector-demo</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
@@ -96,7 +96,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;_DEBUG;DEBUG;REL_VERS;STORE=extern;__WIN_NT__;__MCRSFTC__;__WINDOWS__;DIME_NOT_DLL;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SIZE_T;_STL_DB;_DNK_RENAME;__WIN32__;__MSC32__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;_ITERATOR_DEBUG_LEVEL=0;_DEBUG;DEBUG;REL_VERS;STORE=extern;__WIN_NT__;__MCRSFTC__;__WINDOWS__;DIME_NOT_DLL;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SIZE_T;_STL_DB;_DNK_RENAME;__WIN32__;__MSC32__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
@@ -112,13 +112,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Build\Debugx64\v8inspector.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8.dll.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8_libbase.dll.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8_libplatform.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>build_ITERATOR_DEBUG_0\Debugx64\v8inspector.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8.dll.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8_libbase.dll.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8_libplatform.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>build/Debugx64/inspector.lib</ImportLibrary>
-      <ProgramDataBaseFile>build/Debugx64/inspector.pdb</ProgramDataBaseFile>
+      <ImportLibrary>build_ITERATOR_DEBUG_0/Debugx64/inspector.lib</ImportLibrary>
+      <ProgramDataBaseFile>build_ITERATOR_DEBUG_0/Debugx64/inspector.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -140,7 +140,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;_DEBUG;DEBUG;REL_VERS;STORE=extern;__WIN_NT__;__MCRSFTC__;__WINDOWS__;DIME_NOT_DLL;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SIZE_T;_STL_DB;_DNK_RENAME;__WIN32__;__MSC32__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;CMAKE_INTDIR="Debug";_SILENCE_STDEXT_HASH_DEPRECATION_WARNINGS;_ITERATOR_DEBUG_LEVEL=0;_DEBUG;DEBUG;REL_VERS;STORE=extern;__WIN_NT__;__MCRSFTC__;__WINDOWS__;DIME_NOT_DLL;_CRT_SECURE_NO_DEPRECATE;NOMINMAX;_SIZE_T;_STL_DB;_DNK_RENAME;__WIN32__;__MSC32__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
     </ClCompile>
     <ResourceCompile>
@@ -156,13 +156,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Build\Debugx86\v8inspector.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8.dll.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8_libbase.dll.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8_libplatform.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>build_ITERATOR_DEBUG_0\Debugx86\v8inspector.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8.dll.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8_libbase.dll.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8_libplatform.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>build/Debugx86/inspector.lib</ImportLibrary>
-      <ProgramDataBaseFile>build/Debugx86/inspector.pdb</ProgramDataBaseFile>
+      <ImportLibrary>build_ITERATOR_DEBUG_0/Debugx86/inspector.lib</ImportLibrary>
+      <ProgramDataBaseFile>build_ITERATOR_DEBUG_0/Debugx86/inspector.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -180,7 +180,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <BrowseInformation>false</BrowseInformation>
@@ -198,13 +198,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Build\Releasex64\v8inspector.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8.dll.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8_libbase.dll.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8_libplatform.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>build_ITERATOR_DEBUG_0\Releasex64\v8inspector.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8.dll.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8_libbase.dll.lib;..\..\v8-v141-x64.7.1.302.4\lib\Release\v8_libplatform.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>build/Releasex64/inspector.lib</ImportLibrary>
-      <ProgramDataBaseFile>build/Releasex64/inspector.pdb</ProgramDataBaseFile>
+      <ImportLibrary>build_ITERATOR_DEBUG_0/Releasex64/inspector.lib</ImportLibrary>
+      <ProgramDataBaseFile>build_ITERATOR_DEBUG_0/Releasex64/inspector.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -222,7 +222,7 @@
       <RuntimeTypeInfo>true</RuntimeTypeInfo>
       <UseFullPaths>false</UseFullPaths>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_ITERATOR_DEBUG_LEVEL=0;CMAKE_INTDIR="Release";%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <BrowseInformation>false</BrowseInformation>
@@ -240,13 +240,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>Build\Releasex86\v8inspector.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8.dll.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8_libbase.dll.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8_libplatform.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>build_ITERATOR_DEBUG_0\Releasex86\v8inspector.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8.dll.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8_libbase.dll.lib;..\..\v8-v141-x86.7.1.302.4\lib\Release\v8_libplatform.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x86</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>build/Releasex86/inspector.lib</ImportLibrary>
-      <ProgramDataBaseFile>build/Releasex86/inspector.pdb</ProgramDataBaseFile>
+      <ImportLibrary>build_ITERATOR_DEBUG_0/Releasex86/inspector.lib</ImportLibrary>
+      <ProgramDataBaseFile>build_ITERATOR_DEBUG_0/Releasex86/inspector.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
