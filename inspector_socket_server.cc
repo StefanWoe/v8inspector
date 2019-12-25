@@ -136,7 +136,7 @@ std::string PrintDebuggerReadyMessage(const std::string& host,
     std::string frontend_url = MakeFrontEndURL(host, port, id);
     if(out)
         fprintf(out, "%s\n", frontend_url.c_str());
-    fprintf(stderr, "Debugger starting on %s\n", frontend_url.c_str());
+    fprintf(stderr, "Debugger connection SUCCESS; Copy URL and open in Chrom browser:\n%s\n", frontend_url.c_str());
 
     result += frontend_url + "\n";
   }
@@ -171,8 +171,9 @@ void SendProtocolJson(InspectorSocket* socket) {
   strm.zfree = Z_NULL;
   strm.opaque = Z_NULL;
 
+  // BUGBUG ToFix
   printf("PROTOCOL_JSON not included!");
-  exit(-1);
+  return;
 
   assert(Z_OK == inflateInit(&strm));
   static const size_t kDecompressedSize =
